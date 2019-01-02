@@ -5,10 +5,12 @@ A simple babel plugin to allow operator overloading on Object prototypes.
 ## Definitions:
 | symbol | meaning |
 | :---: | :---: |
-| `⊙` | Any valid operator |
+| `⊙` |  Any of [these valid operators](#operators)|
 | `_`  | (underscore) any variable |
 | `a --> b`  | `a` transpiles to `b` |
 | `-x-`: `fn`  | `fn` does not transpile |
+
+
 ## How it works
 ### This plugin does 2 things:
 #### 1. Calls `Object.defineProperties` on `Object.prototype` to define operator methods on the Object prototype.
@@ -18,6 +20,27 @@ A simple babel plugin to allow operator overloading on Object prototypes.
     * `-x-` : `return this.valueOf() ⊙ _.valueOf()`
     * `-x-` : `return _.valueOf() ⊙ this.valueOf()`
 > This plugin is **not** recommended for client-side scripts as it transpiles **all** operators into functions - which has a **massive** performance impact.
+
+### Valid Operators: (current: Binary only)
+<dl>
+
+</dl><dt> Arithmetic Operators</dt><dd> <code>+ - / % * **</code></dd>
+<dl>
+
+</dl><dt> Bitwise Operators</dt><dd> <code>& | >> << >>> ^</code></dd>
+<dl>
+
+</dl><dt> Comparison Operators</dt><dd> <code>== === != !== > >= <=</code></dd>
+<dl>
+
+</dl><dt> Logical Operators</dt><dd> <code>&& || !</code></dd>
+<dl>
+
+</dl><dt> Instanceof</dt><dd> <code>instanceof</code></dd>
+<dl>
+    <dt> In</dt><dd> <code>in</code> </dd>
+
+</dl>
 
 ## Usage
 This plugin's powers can be made use of in the following ways:
