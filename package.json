@@ -1,0 +1,20 @@
+{
+  "name": "babel-plugin-proto-ops",
+  "version": "0.0.3",
+  "main": "index.js",
+  "repository": "https://github.com/suli-g/babel-plugin-proto-ops.git",
+  "author": "Sulaiman Gafoor <suligzus@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.2.2"
+  },
+  "scripts": {
+    "test": "npm run init && set BABEL_DISABLE_CACHE=1 && jest",
+    "init": "node plugin/init.js"
+  },
+  "devDependencies": {
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0"
+  }
+}

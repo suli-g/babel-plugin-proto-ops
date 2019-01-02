@@ -1,0 +1,7 @@
+{
+    "plugins": [
+        ["@babel/plugin-proposal-pipeline-operator", { "proposal": "minimal"}],
+        ["@babel/plugin-proposal-class-properties", { "loose": true}],
+        "@babel/plugin-proposal-do-expressions"
+    ]
+}

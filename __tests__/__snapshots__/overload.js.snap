@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`works 1`] = `"1[\\"+\\"](1);"`;
+
+exports[`works 2`] = `"x[\\"+\\"](1);"`;
+
+exports[`works 3`] = `
+"{}
++1;"
+`;
+
+exports[`works 4`] = `"1[\\"+\\"]({});"`;
+
+exports[`works 5`] = `"1[\\"+\\"](x);"`;
+
+exports[`works 6`] = `"this[\\"+\\"](1);"`;
+
+exports[`works 7`] = `"this.valueOf()[\\"+\\"](1);"`;
+
+exports[`works 8`] = `"this.valueOf()[\\"+\\"](x);"`;
+
+exports[`works 9`] = `"this.valueOf()[\\"+\\"](x.valueOf());"`;
+
+exports[`works 10`] = `
+"{
+  a: 1;
+}
++{
+  b: 2
+};"
+`;
+
+exports[`works 11`] = `
+"a[\\"+\\"]({
+  b: 2
+});"
+`;
+
+exports[`works 12`] = `
+"function x() {
+  return this.valueOf()[\\"+\\"](x.valueOf());
+}"
+`;
